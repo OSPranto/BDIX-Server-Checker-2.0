@@ -18,54 +18,173 @@
     {
         "name": "External Test Link (Google)",
         "url": "https://www.google.com/"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://www.bnet-bd.com"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://ftpbd.net"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://103.58.73.6"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://103.58.73.7"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://103.58.73.8"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://103.58.73.9"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://103.58.73.10"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://103.58.73.10:8096"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://server1.ftpbd.net"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://server1.ftpbd.net/FTP-1"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://server2.ftpbd.net"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://server2.ftpbd.net/FTP-2"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://server3.ftpbd.net"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://server3.ftpbd.net/FTP-3"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://server4.ftpbd.net"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://server4.ftpbd.net/FTP-4"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://server5.ftpbd.net"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://server5.ftpbd.net/FTP-5"
+    },
+    {
+        "name": "Business Network (FTPBD)",
+        "url": "http://media.ftpbd.net:8096"
+    },
+    {
+        "name": "Circle Network FTP",
+        "url": "http://new.circleftp.net"
+    },
+    {
+        "name": "Circle Network FTP",
+        "url": "http://circleftp.net"
+    },
+    {
+        "name": "Circle Network FTP",
+        "url": "http://ftp4.circleftp.net"
+    },
+    {
+        "name": "Circle Network FTP",
+        "url": "http://old.circleftp.net"
+    },
+    {
+        "name": "Circle Network FTP",
+        "url": "http://103.170.204.84"
+    },
+    {
+        "name": "Circle Network FTP",
+        "url": "http://15.1.1.4"
+    },
+    {
+        "name": "Circle Network FTP",
+        "url": "http://15.1.1.5"
+    },
+    {
+        "name": "Circle Network FTP",
+        "url": "http://emby.circleftp.net:8096"
+    },
+    {
+        "name": "SAM Online",
+        "url": "https://samftp.com"
+    },
+    {
+        "name": "SAM Online",
+        "url": "http://172.16.50.4"
+    },
+    {
+        "name": "SAM Online",
+        "url": "http://172.16.50.7"
+    },
+    {
+        "name": "SAM Online",
+        "url": "http://movie.sambd.net:8096"
+    },
+    {
+        "name": "Cogent Broadband (KhulnaFlix)",
+        "url": "http://khulnaflix.net"
+    },
+    {
+        "name": "Cogent Broadband (KhulnaFlix)",
+        "url": "http://103.153.175.254/NAS1"
+    },
+    {
+        "name": "Cogent Broadband (KhulnaFlix)",
+        "url": "http://bokasoka.net"
+    },
+    {
+        "name": "Cogent Broadband (KhulnaFlix)",
+        "url": "http://bokasoka.net/NAS1"
+    },
+    {
+        "name": "Cogent Broadband (KhulnaFlix)",
+        "url": "http://file.khulnaflix.net"
+    },
+    {
+        "name": "Discovery Internet",
+        "url": "http://discoveryftp.net"
+    },
+    {
+        "name": "Discovery Internet",
+        "url": "http://103.120.165.196"
+    },
+    {
+        "name": "Discovery Internet",
+        "url": "http://dflix.discoveryftp.net"
+    },
+    {
+        "name": "Discovery Internet",
+        "url": "http://cds1.discoveryftp.net"
+    },
+    {
+        "name": "Discovery Internet",
+        "url": "http://cds2.discoveryftp.net"
+    },
+    {
+        "name": "Discovery Internet",
+        "url": "http://cds3.discoveryftp.net"
     }
-    [
-  { name: "Business Network (FTPBD)", url: "http://www.bnet-bd.com" },
-  { name: "Business Network (FTPBD)", url: "http://ftpbd.net" },
-  { name: "Business Network (FTPBD)", url: "http://103.58.73.6" },
-  { name: "Business Network (FTPBD)", url: "http://103.58.73.7" },
-  { name: "Business Network (FTPBD)", url: "http://103.58.73.8" },
-  { name: "Business Network (FTPBD)", url: "http://103.58.73.9" },
-  { name: "Business Network (FTPBD)", url: "http://103.58.73.10" },
-  { name: "Business Network (FTPBD)", url: "http://103.58.73.10:8096" },
-  { name: "Business Network (FTPBD)", url: "http://server1.ftpbd.net" },
-  { name: "Business Network (FTPBD)", url: "http://server1.ftpbd.net/FTP-1" },
-  { name: "Business Network (FTPBD)", url: "http://server2.ftpbd.net" },
-  { name: "Business Network (FTPBD)", url: "http://server2.ftpbd.net/FTP-2" },
-  { name: "Business Network (FTPBD)", url: "http://server3.ftpbd.net" },
-  { name: "Business Network (FTPBD)", url: "http://server3.ftpbd.net/FTP-3" },
-  { name: "Business Network (FTPBD)", url: "http://server4.ftpbd.net" },
-  { name: "Business Network (FTPBD)", url: "http://server4.ftpbd.net/FTP-4" },
-  { name: "Business Network (FTPBD)", url: "http://server5.ftpbd.net" },
-  { name: "Business Network (FTPBD)", url: "http://server5.ftpbd.net/FTP-5" },
-  { name: "Business Network (FTPBD)", url: "http://media.ftpbd.net:8096" },
-
-  { name: "Circle Network FTP", url: "http://new.circleftp.net" },
-  { name: "Circle Network FTP", url: "http://circleftp.net" },
-  { name: "Circle Network FTP", url: "http://ftp4.circleftp.net" },
-  { name: "Circle Network FTP", url: "http://old.circleftp.net" },
-  { name: "Circle Network FTP", url: "http://103.170.204.84" },
-  { name: "Circle Network FTP", url: "http://15.1.1.4" },
-  { name: "Circle Network FTP", url: "http://15.1.1.5" },
-  { name: "Circle Network FTP", url: "http://emby.circleftp.net:8096" },
-
-  { name: "SAM Online", url: "https://samftp.com" },
-  { name: "SAM Online", url: "http://172.16.50.4" },
-  { name: "SAM Online", url: "http://172.16.50.7" },
-  { name: "SAM Online", url: "http://movie.sambd.net:8096" },
-
-  { name: "Cogent Broadband (KhulnaFlix)", url: "http://khulnaflix.net" },
-  { name: "Cogent Broadband (KhulnaFlix)", url: "http://103.153.175.254/NAS1" },
-  { name: "Cogent Broadband (KhulnaFlix)", url: "http://bokasoka.net" },
-  { name: "Cogent Broadband (KhulnaFlix)", url: "http://bokasoka.net/NAS1" },
-  { name: "Cogent Broadband (KhulnaFlix)", url: "http://file.khulnaflix.net" },
-
-  { name: "Discovery Internet", url: "http://discoveryftp.net" },
-  { name: "Discovery Internet", url: "http://103.120.165.196" },
-  { name: "Discovery Internet", url: "http://dflix.discoveryftp.net" },
-  { name: "Discovery Internet", url: "http://cds1.discoveryftp.net" },
-  { name: "Discovery Internet", url: "http://cds2.discoveryftp.net" },
-  { name: "Discovery Internet", url: "http://cds3.discoveryftp.net" }
-]
-
 ]
