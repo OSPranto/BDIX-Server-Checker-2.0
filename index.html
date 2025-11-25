@@ -6,7 +6,7 @@
     <title>OSPranto Tech BDiX Server Checker - Premium</title>
     
     
-    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="icon" href="logo1.png" type="image/png">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
@@ -33,7 +33,6 @@
             border-radius: 15px;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             padding: 30px;
-            /* Updated: Removed margin-bottom here, using margin in main children */
             transition: transform 0.3s ease;
         }
 
@@ -101,8 +100,8 @@
             align-items: center;
             gap: 25px;
             flex-wrap: wrap;
-            /* Updated: Increased spacing after the controls */
-            margin-bottom: 50px; 
+            /* **Updated:** Increased spacing after the controls card */
+            margin-bottom: 70px; 
         }
 
         #server-category {
@@ -127,7 +126,7 @@
             position: relative;
             width: 150px;
             height: 150px;
-            /* Updated: Increased bottom margin for better separation from footer */
+            /* **Updated:** Removed top margin, relies on .controls margin-bottom */
             margin: 0 auto 50px; 
             display: none;
         }
@@ -208,7 +207,6 @@
         /* Server Status Sections */
         .server-status {
             text-align: left;
-            /* Added margin between the list and the footer */
             margin-bottom: 40px; 
             display: none;
         }
@@ -284,14 +282,14 @@
 
         /* Footer and Contact Button */
         footer {
-            margin-top: 50px; /* Increased margin to separate from content above */
+            margin-top: 50px; 
             background-color: #0a141d;
             padding: 20px;
             border-top: 2px solid #4CAF50;
             display: flex;
-            justify-content: center; /* Center the items in the footer */
+            justify-content: center;
             align-items: center;
-            flex-direction: column; /* Stack items vertically */
+            flex-direction: column;
         }
 
         /* New: Contact Button in Footer */
@@ -299,11 +297,10 @@
             text-decoration: none;
             color: #e0e6f1;
             font-weight: 600;
-            padding: 10px 25px; /* Increased padding */
+            padding: 10px 25px;
             border: 2px solid #4CAF50;
             border-radius: 8px;
             transition: background-color 0.3s, color 0.3s;
-            /* Added margin to separate the button from copyright text */
             margin-bottom: 15px; 
             display: inline-block;
         }
@@ -322,7 +319,7 @@
         
         #start-ui-wrapper {
             max-width: 150px;
-            /* Updated: Adjust margin to accommodate the increased margin on controls and footer */
+            /* **Updated:** Set to 0 auto 50px */
             margin: 0 auto 50px;
             position: relative;
         }
@@ -333,7 +330,7 @@
     <header>
         
         <div class="logo-container">
-            <img src="logo.png" alt="OSPranto Tech Logo" class="header-logo">
+            <img src="logo1.png" alt="OSPranto Tech Logo" class="header-logo">
         </div>
         
         <h1>BDiX Server Checker</h1>
