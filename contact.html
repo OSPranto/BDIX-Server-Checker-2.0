@@ -5,57 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>যোগাযোগ | OSPranto Tech</title>
 
-    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="icon" href="logo1.png" type="image/png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
     <style>
-        /* Dark Mode (GitHub থিম) এর সাথে মানানসই কাস্টম CSS */
+        /* Base Setup and Background (Matching index.html) */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #0d1117; 
-            color: #c9d1d9;
+            /* Matching index.html's Radial Gradient Background */
+            background: radial-gradient(circle at top left, #1a2a3a, #0a141d); 
+            color: #e0e6f1;
             min-height: 100vh;
             padding: 40px 20px;
+            margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             box-sizing: border-box;
+            text-align: center;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             width: 100%;
+            flex-grow: 1;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            padding: 20px;
         }
 
-        /* লোগো স্টাইল */
+        /* লোগো স্টাইল (Matching index.html's circular logo) */
         .logo {
             margin-bottom: 15px;
         }
         
         .logo img {
-            width: 80px; 
-            height: 80px;
-            border-radius: 50%; 
-            border: 3px solid #58a6ff;
-            box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+            width: 120px; /* Adjusted size */
+            height: 120px;
+            border-radius: 50%;
+            /* Highlight Color (Matching index.html) */
+            border: 3px solid rgba(76, 175, 80, 0.4); 
+            /* Highlight Shadow (Matching index.html) */
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.8), 0 0 5px rgba(0, 0, 0, 0.5);
         }
 
         .header h1 {
-            font-size: 2.5em;
+            /* Highlight Color (Matching index.html) */
+            color: #4CAF50; 
+            font-size: 2.8em;
             font-weight: 700;
-            color: #58a6ff;
             margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
         }
 
         .header p {
             font-size: 1em;
-            color: #8b949e;
+            color: #aeb5c0;
+            font-weight: 300;
         }
         
         .grid-layout {
@@ -71,63 +82,85 @@
             }
         }
 
+        /* Card Style (Matching index.html's glass-card) */
         .card {
-            background-color: #161b22; 
+            /* Glassmorphism/Dark Card Base */
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #30363d;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            text-align: left;
         }
         
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
         .card h2 {
             font-size: 1.5em;
             font-weight: 600;
-            color: #c9d1d9;
+            color: #81C784; /* Lighter Green for sub-headings */
             margin-bottom: 20px;
+            border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+            padding-bottom: 10px;
         }
 
         /* ফর্ম স্টাইল */
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .form-group label {
             display: block;
-            color: #c9d1d9;
+            color: #e0e6f1;
             font-size: 0.9em;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
 
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 10px;
-            background-color: #21262d; 
-            border: 1px solid #30363d;
-            color: #c9d1d9;
-            border-radius: 6px;
+            padding: 12px;
+            /* Dark Input Background */
+            background-color: #0a141d; 
+            /* Subtle Border Matching Controls in index.html */
+            border: 1px solid #4CAF50; 
+            color: #e0e6f1;
+            border-radius: 8px;
             box-sizing: border-box;
+            font-size: 1em;
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
 
         .form-group input:focus, .form-group textarea:focus {
             outline: none;
-            border-color: #58a6ff;
+            /* Focus Highlight Matching index.html */
+            border-color: #81C784; 
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
         }
 
         .submit-button {
             width: 100%;
-            background-color: #238636;
-            color: white;
+            /* Button Style Matching index.html's Start Button */
+            background: linear-gradient(45deg, #4CAF50, #66BB6A); 
+            color: #0a141d;
             border: none;
-            padding: 12px;
-            border-radius: 6px;
+            padding: 15px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            transition: background-color 0.3s;
+            font-size: 1.1em;
+            font-weight: 700;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
         }
 
         .submit-button:hover {
-            background-color: #2ea043;
+            background: linear-gradient(45deg, #66BB6A, #4CAF50);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.5);
         }
 
         /* কন্টাক্ট ইনফো কার্ড স্টাইল */
@@ -136,15 +169,18 @@
             align-items: center;
             padding: 15px;
             margin-bottom: 15px;
-            border-radius: 8px;
-            background-color: #21262d;
-            border: 1px solid #30363d;
+            border-radius: 10px;
+            /* Darker background for contrast */
+            background-color: #1a2a3a; 
+            border: 1px solid rgba(76, 175, 80, 0.2); 
             text-decoration: none;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
         }
 
         .info-link:hover {
-            background-color: #30363d;
+            background-color: #213040;
+            transform: translateX(5px);
         }
 
         .info-icon {
@@ -153,49 +189,65 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 6px;
+            border-radius: 50%; /* Circular Icons */
             margin-right: 15px;
+            font-size: 1.5em;
+            color: #0a141d; /* Dark text inside icon circle */
         }
+        /* Icon background colors based on common branding, but using index theme colors */
+        .bg-red { background-color: #ff5252; } /* Error Red for Email */
+        .bg-blue-sky { background-color: #90CAF9; } /* Link Color for Telegram */
+        .bg-blue-dark { background-color: #1877f2; } 
+        .bg-green { background-color: #4CAF50; } /* Theme Green for GitHub */
 
         .info-content h3 {
             font-size: 1.1em;
             font-weight: 600;
-            color: #58a6ff;
+            /* Link color for titles */
+            color: #90CAF9; 
             margin: 0;
         }
 
         .info-content p {
             font-size: 0.9em;
-            color: #8b949e;
+            color: #aeb5c0;
             margin: 0;
         }
 
-        .bg-red { background-color: #f85149; } 
-        .bg-blue-sky { background-color: #0088cc; } 
-        .bg-blue-dark { background-color: #1877f2; } 
-        .bg-gray-dark { background-color: #30363d; } 
-
         /* ফুটার */
         .footer {
-            margin-top: 40px;
-            border-top: 1px solid #30363d;
+            margin-top: 50px;
+            /* Matching index.html footer style */
+            background-color: #0a141d; 
+            border-top: 2px solid #4CAF50;
             padding-top: 20px;
             text-align: center;
+            width: 100%;
         }
         
         .back-to-home {
-            background-color: #58a6ff;
-            color: #0d1117;
-            padding: 10px 20px;
-            border-radius: 6px;
+            /* Button Style Matching index.html Footer Button */
+            background-color: transparent; 
+            color: #e0e6f1;
+            padding: 12px 25px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             display: inline-block;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
+            border: 2px solid #4CAF50;
+            margin-bottom: 20px;
         }
         
         .back-to-home:hover {
-            background-color: #79b8ff;
+            background-color: #4CAF50;
+            color: #0a141d;
+        }
+        
+        .copyright {
+            color: #5d6675;
+            font-size: 0.8em;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -208,13 +260,13 @@
             </div>
             
             <h1>যোগাযোগ করুন (Contact Us)</h1>
-            <p>ডেভেলপার: **OSPranto Tech**</p>
+            <p>আমাদের সাথে যুক্ত হোন এবং আপনার মূল্যবান মতামত দিন।</p>
         </div>
 
         <div class="grid-layout">
             
             <div class="card">
-                <h2>একটি বার্তা পাঠান</h2>
+                <h2>বার্তা পাঠান (Send a Message)</h2>
                 <form id="contact-form">
                     <div class="form-group">
                         <label for="name">আপনার নাম</label>
@@ -238,11 +290,11 @@
                 </form>
             </div>
 
-            <div>
+            <div class="card">
                 <h2>ডেভেলপার কন্টাক্ট (OSPranto Tech)</h2>
 
                 <a href="mailto:OSPranto.Official@gmail.com" class="info-link">
-                    <div class="info-icon bg-red"><i class="ri-mail-line text-xl text-white"></i></div>
+                    <div class="info-icon bg-red"><i class="ri-mail-line"></i></div>
                     <div class="info-content">
                         <h3>Email (Primary)</h3>
                         <p>OSPranto.Official@gmail.com</p>
@@ -250,7 +302,7 @@
                 </a>
 
                 <a href="https://t.me/MrMysteryMoon" target="_blank" class="info-link">
-                    <div class="info-icon bg-blue-sky"><i class="ri-telegram-line text-xl text-white"></i></div>
+                    <div class="info-icon bg-blue-sky"><i class="ri-telegram-line"></i></div>
                     <div class="info-content">
                         <h3>Telegram</h3>
                         <p>@MrMysteryMoon</p>
@@ -258,7 +310,7 @@
                 </a>
 
                 <a href="https://facebook.com/AdnanHasanPranto" target="_blank" class="info-link">
-                    <div class="info-icon bg-blue-dark"><i class="ri-facebook-box-line text-xl text-white"></i></div>
+                    <div class="info-icon bg-blue-dark"><i class="ri-facebook-box-line"></i></div>
                     <div class="info-content">
                         <h3>Facebook</h3>
                         <p>Adnan Hasan Pranto</p>
@@ -266,7 +318,7 @@
                 </a>
 
                 <a href="https://github.com/OSPrantoTech" target="_blank" class="info-link">
-                    <div class="info-icon bg-gray-dark"><i class="ri-github-line text-xl text-white"></i></div>
+                    <div class="info-icon bg-green"><i class="ri-github-line"></i></div>
                     <div class="info-content">
                         <h3>GitHub</h3>
                         <p>OSPranto Tech</p>
@@ -274,12 +326,13 @@
                 </a>
             </div>
         </div>
+    </div>
 
-        <div class="footer">
-            <a href="index.html" class="back-to-home">
-                হোমপেজে ফিরে যান
-            </a>
-        </div>
+    <div class="footer">
+        <a href="index.html" class="back-to-home">
+            হোমপেজে ফিরে যান
+        </a>
+        <p class="copyright">Developed by OSPranto Tech | &copy; 2025. All rights reserved.</p>
     </div>
 
     <script>
