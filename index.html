@@ -46,7 +46,7 @@
             margin-bottom: 20px;
         }
         
-        /* New: Header Logo Styling (Circular Look) */
+        /* Header Logo Styling (Circular Look) */
         .logo-container {
             width: 150px; /* লোগোর বৃত্তাকার ফ্রেমের আকার */
             height: 150px;
@@ -284,32 +284,34 @@
             background-color: #0a141d;
             padding: 20px;
             border-top: 2px solid #4CAF50;
+            display: flex; /* Flexbox for alignment */
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
-        .contact-info {
-            margin-bottom: 15px;
+        /* New: Contact Button in Footer */
+        .contact-link {
+            text-decoration: none;
+            color: #e0e6f1;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 5px;
+        }
+
+        .contact-link:hover {
+            background-color: #4CAF50;
+            color: #0a141d;
         }
         
-        .contact-info h3 {
-            color: #4CAF50;
-            margin-top: 0;
-            font-weight: 600;
-        }
-
-        .contact-info p {
-            margin: 5px 0;
-            font-weight: 300;
-        }
-
-        .contact-info a {
-            color: #90CAF9;
-            text-decoration: none;
-        }
-
         .copyright {
             color: #5d6675;
             font-size: 0.8em;
-            margin-top: 15px;
+            margin: 5px;
+            flex-basis: 100%; /* Take full width on a new line */
         }
         
         #start-ui-wrapper {
@@ -365,13 +367,7 @@
     </main>
 
     <footer>
-        <div class="contact-info">
-            <h3>OSPranto Tech - Connect</h3>
-            <p><strong>GitHub:</strong> <a href="https://github.com/OSPrantoTech" target="_blank">OSPranto Tech</a></p>
-            <p><strong>Email:</strong> <a href="mailto:OSPranto.Official@gmail.com">OSPranto.Official@gmail.com</a></p>
-            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/AdnanHasanPranto" target="_blank">Adnan Hasan Pranto</a></p>
-            <p><strong>Telegram:</strong> <a href="https://t.me/MrMysteryMoon" target="_blank">@MrMysteryMoon</a></p>
-        </div>
+        <a href="contact.html" class="contact-link">যোগাযোগ করুন 📧</a>
         <p class="copyright">Developed by OSPranto Tech | &copy; 2025. All rights reserved.</p>
     </footer>
 
