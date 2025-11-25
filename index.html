@@ -46,17 +46,28 @@
             margin-bottom: 20px;
         }
         
-        /* Header Logo Styling */
-        .header-logo {
-            width: 150px; /* Adjust size as needed */
-            height: auto;
-            margin-bottom: 10px;
-            filter: drop-shadow(0 0 8px rgba(76, 175, 80, 0.6)); /* Subtle glow */
+        /* New: Header Logo Styling (Circular Look) */
+        .logo-container {
+            width: 150px; /* লোগোর বৃত্তাকার ফ্রেমের আকার */
+            height: 150px;
+            margin: 0 auto 15px; /* লোগোর উপরে নিচে মার্জিন */
+            border-radius: 50%; /* পুরোপুরি গোল করার জন্য */
+            overflow: hidden; /* ফ্রেমের বাইরে ইমেজ যাতে না যায় */
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.8), 0 0 5px rgba(0, 0, 0, 0.5); /* উজ্জ্বল গ্লো শ্যাডো */
+            border: 3px solid rgba(76, 175, 80, 0.4); /* হালকা বর্ডার */
             transition: transform 0.3s ease;
+            background-color: #0a141d; /* ব্যাকগ্রাউন্ড কালার */
         }
         
-        .header-logo:hover {
-            transform: scale(1.05); /* Slightly enlarge on hover */
+        .logo-container:hover {
+            transform: scale(1.05); /* হোভারে হালকা এনলার্জ */
+        }
+        
+        .header-logo {
+            width: 100%; /* কন্টেইনারের পুরো জায়গা নেবে */
+            height: 100%;
+            object-fit: cover; /* ইমেজটিকে পুরোপুরি কভার করার জন্য */
+            display: block;
         }
         /* End Header Logo Styling */
 
@@ -311,6 +322,7 @@
 <body>
 
     <header>
+        
         <div class="logo-container">
             <img src="logo.png" alt="OSPranto Tech Logo" class="header-logo">
         </div>
@@ -360,7 +372,7 @@
             <p><strong>Facebook:</strong> <a href="https://www.facebook.com/AdnanHasanPranto" target="_blank">Adnan Hasan Pranto</a></p>
             <p><strong>Telegram:</strong> <a href="https://t.me/MrMysteryMoon" target="_blank">@MrMysteryMoon</a></p>
         </div>
-        <p class="copyright">Developed by OSPranto Tech | &copy; 2024. All rights reserved.</p>
+        <p class="copyright">Developed by OSPranto Tech | &copy; 2025. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
