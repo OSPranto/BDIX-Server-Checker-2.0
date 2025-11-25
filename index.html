@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSP BDiX Server Checker</title>
+    <title>OSPranto Tech BDiX Server Checker - Premium</title>
+    
+    
+    <link rel="icon" href="logo.png" type="image/png">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
         /* Base Setup and Background */
         body {
             font-family: 'Poppins', sans-serif;
-            /* Soft radial gradient background for premium feel */
             background: radial-gradient(circle at top left, #1a2a3a, #0a141d); 
-            color: #e0e6f1; /* Light, soft text color */
+            color: #e0e6f1;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -24,31 +27,46 @@
 
         /* Glassmorphism/Card Styles */
         .glass-card {
-            background: rgba(255, 255, 255, 0.08); /* Slight transparency */
-            backdrop-filter: blur(10px); /* Blur effect */
-            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Deep shadow */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             padding: 30px;
             margin-bottom: 25px;
             transition: transform 0.3s ease;
         }
 
         .glass-card:hover {
-            transform: translateY(-3px); /* Subtle lift on hover */
+            transform: translateY(-3px);
         }
 
         header {
             padding: 50px 20px 30px;
             margin-bottom: 20px;
         }
+        
+        /* Header Logo Styling */
+        .header-logo {
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 8px rgba(76, 175, 80, 0.6)); /* Subtle glow */
+            transition: transform 0.3s ease;
+        }
+        
+        .header-logo:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        /* End Header Logo Styling */
 
         header h1 {
-            color: #4CAF50; /* A slightly brighter green for elegance */
+            color: #4CAF50;
             font-weight: 700;
             font-size: 3em;
+            margin-top: 15px;
             margin-bottom: 5px;
-            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Glowing text */
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
         }
 
         header p {
@@ -79,7 +97,7 @@
             padding: 12px 20px;
             font-size: 1.1em;
             border-radius: 8px;
-            background-color: #0a141d; /* Dark input background */
+            background-color: #0a141d;
             color: #e0e6f1;
             border: 1px solid #4CAF50;
             outline: none;
@@ -92,13 +110,13 @@
             box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
         }
         
-        /* New: Circular Progress Bar Styles */
+        /* Circular Progress Bar Styles */
         #circular-progress-container {
             position: relative;
-            width: 150px; /* Size of the circle */
+            width: 150px;
             height: 150px;
             margin: 0 auto 40px;
-            display: none; /* Initially hidden */
+            display: none;
         }
 
         #circular-progress-container.checking {
@@ -107,22 +125,20 @@
 
         .circular-bg {
             fill: none;
-            stroke: rgba(255, 255, 255, 0.15); /* Light circle background */
+            stroke: rgba(255, 255, 255, 0.15);
             stroke-width: 10;
         }
 
         .circular-progress {
             fill: none;
-            stroke: #4CAF50; /* Primary green color */
+            stroke: #4CAF50;
             stroke-width: 10;
             stroke-linecap: round;
-            transform: rotate(-90deg); /* Start at the top */
+            transform: rotate(-90deg);
             transform-origin: 50% 50%;
-            transition: stroke-dashoffset 0.3s ease-out; /* Smooth animation for filling */
-            
-            /* Initial setup for a 70px radius circle: Circumference = 440px */
-            stroke-dasharray: 440; 
-            stroke-dashoffset: 440; /* Starts completely empty */
+            transition: stroke-dashoffset 0.3s ease-out;
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
         }
 
         #progress-text {
@@ -144,9 +160,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 10;
-            
-            /* Button Style */
-            background: linear-gradient(45deg, #4CAF50, #66BB6A); /* Gradient Button */
+            background: linear-gradient(45deg, #4CAF50, #66BB6A);
             color: #0a141d;
             border: none;
             padding: 15px 35px;
@@ -180,7 +194,6 @@
 
         /* Server Status Sections */
         .server-status {
-            /* Inherits glass-card style */
             text-align: left;
             display: none;
         }
@@ -200,7 +213,7 @@
         }
 
         .not-working-title {
-            color: #FF5252; /* A modern red */
+            color: #FF5252;
             border-bottom: 2px solid #FF5252;
             text-shadow: 0 0 5px rgba(255, 82, 82, 0.3);
         }
@@ -215,16 +228,16 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Very soft separator */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             transition: background-color 0.2s;
         }
 
         .server-item:hover {
-            background-color: rgba(255, 255, 255, 0.03); /* Subtle hover background */
+            background-color: rgba(255, 255, 255, 0.03);
         }
 
         .server-item a {
-            color: #90CAF9; /* Soft blue link */
+            color: #90CAF9;
             text-decoration: none;
             font-weight: 400;
             word-break: break-all;
@@ -254,9 +267,9 @@
             color: #0a141d;
         }
 
-        /* Footer and Contact Info - Premium Look */
+        /* Footer and Contact Info */
         footer {
-            margin-top: auto; /* Pushes footer to the bottom */
+            margin-top: auto;
             background-color: #0a141d;
             padding: 20px;
             border-top: 2px solid #4CAF50;
@@ -298,7 +311,9 @@
 <body>
 
     <header>
-        <h1>OSPranto Tech BDiX Server Checker</h1>
+        
+        <img src="logo.png" alt="OSPranto Tech Logo" class="header-logo">
+        <h1>BDiX Server Checker</h1>
         <p>ক্যাটাগরি নির্বাচন করুন এবং দ্রুত, নির্ভরযোগ্য সার্ভার স্ট্যাটাস চেক করুন।</p>
     </header>
 
