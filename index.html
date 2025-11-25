@@ -6,7 +6,7 @@
     <title>OSPranto Tech BDiX Server Checker - Premium</title>
     
     
-    <link rel="icon" href="logo1.png" type="image/png">
+    <link rel="icon" href="logo.png" type="image/png">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
@@ -33,7 +33,7 @@
             border-radius: 15px;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             padding: 30px;
-            margin-bottom: 25px;
+            /* Updated: Removed margin-bottom here, using margin in main children */
             transition: transform 0.3s ease;
         }
 
@@ -48,25 +48,25 @@
         
         /* Header Logo Styling (Circular Look) */
         .logo-container {
-            width: 150px; /* লোগোর বৃত্তাকার ফ্রেমের আকার */
+            width: 150px;
             height: 150px;
-            margin: 0 auto 15px; /* লোগোর উপরে নিচে মার্জিন */
-            border-radius: 50%; /* পুরোপুরি গোল করার জন্য */
-            overflow: hidden; /* ফ্রেমের বাইরে ইমেজ যাতে না যায় */
-            box-shadow: 0 0 15px rgba(76, 175, 80, 0.8), 0 0 5px rgba(0, 0, 0, 0.5); /* উজ্জ্বল গ্লো শ্যাডো */
-            border: 3px solid rgba(76, 175, 80, 0.4); /* হালকা বর্ডার */
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.8), 0 0 5px rgba(0, 0, 0, 0.5);
+            border: 3px solid rgba(76, 175, 80, 0.4);
             transition: transform 0.3s ease;
-            background-color: #0a141d; /* ব্যাকগ্রাউন্ড কালার */
+            background-color: #0a141d;
         }
         
         .logo-container:hover {
-            transform: scale(1.05); /* হোভারে হালকা এনলার্জ */
+            transform: scale(1.05);
         }
         
         .header-logo {
-            width: 100%; /* কন্টেইনারের পুরো জায়গা নেবে */
+            width: 100%;
             height: 100%;
-            object-fit: cover; /* ইমেজটিকে পুরোপুরি কভার করার জন্য */
+            object-fit: cover;
             display: block;
         }
         /* End Header Logo Styling */
@@ -101,7 +101,8 @@
             align-items: center;
             gap: 25px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
+            /* Updated: Increased spacing after the controls */
+            margin-bottom: 50px; 
         }
 
         #server-category {
@@ -126,7 +127,8 @@
             position: relative;
             width: 150px;
             height: 150px;
-            margin: 0 auto 40px;
+            /* Updated: Increased bottom margin for better separation from footer */
+            margin: 0 auto 50px; 
             display: none;
         }
 
@@ -206,6 +208,8 @@
         /* Server Status Sections */
         .server-status {
             text-align: left;
+            /* Added margin between the list and the footer */
+            margin-bottom: 40px; 
             display: none;
         }
 
@@ -278,16 +282,16 @@
             color: #0a141d;
         }
 
-        /* Footer and Contact Info */
+        /* Footer and Contact Button */
         footer {
-            margin-top: auto;
+            margin-top: 50px; /* Increased margin to separate from content above */
             background-color: #0a141d;
             padding: 20px;
             border-top: 2px solid #4CAF50;
-            display: flex; /* Flexbox for alignment */
-            justify-content: space-around;
+            display: flex;
+            justify-content: center; /* Center the items in the footer */
             align-items: center;
-            flex-wrap: wrap;
+            flex-direction: column; /* Stack items vertically */
         }
 
         /* New: Contact Button in Footer */
@@ -295,11 +299,13 @@
             text-decoration: none;
             color: #e0e6f1;
             font-weight: 600;
-            padding: 10px 20px;
+            padding: 10px 25px; /* Increased padding */
             border: 2px solid #4CAF50;
             border-radius: 8px;
             transition: background-color 0.3s, color 0.3s;
-            margin: 5px;
+            /* Added margin to separate the button from copyright text */
+            margin-bottom: 15px; 
+            display: inline-block;
         }
 
         .contact-link:hover {
@@ -311,12 +317,13 @@
             color: #5d6675;
             font-size: 0.8em;
             margin: 5px;
-            flex-basis: 100%; /* Take full width on a new line */
+            flex-basis: 100%;
         }
         
         #start-ui-wrapper {
             max-width: 150px;
-            margin: 0 auto 40px;
+            /* Updated: Adjust margin to accommodate the increased margin on controls and footer */
+            margin: 0 auto 50px;
             position: relative;
         }
     </style>
@@ -326,7 +333,7 @@
     <header>
         
         <div class="logo-container">
-            <img src="logo1.png" alt="OSPranto Tech Logo" class="header-logo">
+            <img src="logo.png" alt="OSPranto Tech Logo" class="header-logo">
         </div>
         
         <h1>BDiX Server Checker</h1>
