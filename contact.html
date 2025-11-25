@@ -3,138 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>যোগাযোগ করুন - OSPranto Tech</title>
+    <title>যোগাযোগ | OSPranto Tech</title>
+
     <link rel="icon" href="logo.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <style>
-        /* Inheriting base styles from index.html */
+        /* Dark Mode (GitHub থিম) এর সাথে মানানসই কাস্টম CSS */
         body {
             font-family: 'Poppins', sans-serif;
-            background: radial-gradient(circle at top left, #1a2a3a, #0a141d); 
-            color: #e0e6f1;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            text-align: center;
+            background-color: #0d1117; 
+            color: #c9d1d9;
             min-height: 100vh;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* লোগো স্টাইল */
+        .logo {
+            margin-bottom: 15px;
         }
         
-        .glass-card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            padding: 30px;
-            margin: 50px auto;
-            max-width: 500px;
-            width: 90%;
-            text-align: left;
+        .logo img {
+            width: 80px; 
+            height: 80px;
+            border-radius: 50%; 
+            border: 3px solid #58a6ff;
+            box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
         }
 
-        h1 {
-            color: #4CAF50;
-            font-weight: 700;
+        .header h1 {
             font-size: 2.5em;
-            margin-bottom: 20px;
-            text-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
-            text-align: center;
+            font-weight: 700;
+            color: #58a6ff;
+            margin-bottom: 10px;
         }
 
-        .contact-item {
+        .header p {
+            font-size: 1em;
+            color: #8b949e;
+        }
+        
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background-color: #161b22; 
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #c9d1d9;
+            margin-bottom: 20px;
+        }
+
+        /* ফর্ম স্টাইল */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #c9d1d9;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #21262d; 
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #58a6ff;
+        }
+
+        .submit-button {
+            width: 100%;
+            background-color: #238636;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #2ea043;
+        }
+
+        /* কন্টাক্ট ইনফো কার্ড স্টাইল */
+        .info-link {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
-            padding: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
 
-        .contact-item:last-child {
-            border-bottom: none;
+        .info-link:hover {
+            background-color: #30363d;
         }
 
-        .icon {
-            color: #4CAF50;
-            font-size: 1.5em;
-            width: 30px;
-            text-align: center;
+        .info-icon {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
             margin-right: 15px;
         }
 
-        .contact-item p {
-            margin: 0;
+        .info-content h3 {
             font-size: 1.1em;
-            font-weight: 300;
-        }
-
-        .contact-item a {
-            color: #90CAF9;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-item a:hover {
-            color: #BBDEFB;
-        }
-
-        /* Back Button Style */
-        .back-link {
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #e0e6f1;
             font-weight: 600;
-            padding: 10px 20px;
-            border: 2px solid #90CAF9;
-            border-radius: 8px;
-            transition: background-color 0.3s, color 0.3s;
+            color: #58a6ff;
+            margin: 0;
         }
 
-        .back-link:hover {
-            background-color: #90CAF9;
-            color: #0a141d;
+        .info-content p {
+            font-size: 0.9em;
+            color: #8b949e;
+            margin: 0;
+        }
+
+        .bg-red { background-color: #f85149; } 
+        .bg-blue-sky { background-color: #0088cc; } 
+        .bg-blue-dark { background-color: #1877f2; } 
+        .bg-gray-dark { background-color: #30363d; } 
+
+        /* ফুটার */
+        .footer {
+            margin-top: 40px;
+            border-top: 1px solid #30363d;
+            padding-top: 20px;
+            text-align: center;
         }
         
-        footer {
-            margin-top: auto; 
-            padding: 20px;
+        .back-to-home {
+            background-color: #58a6ff;
+            color: #0d1117;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        .back-to-home:hover {
+            background-color: #79b8ff;
         }
     </style>
 </head>
 <body>
-    <div class="glass-card">
-        <h1>আমাদের সাথে যোগাযোগ করুন</h1>
 
-        <div class="contact-item">
-            <span class="icon">💻</span>
-            <p><strong>GitHub:</strong> <a href="https://github.com/OSPrantoTech" target="_blank">OSPranto Tech</a></p>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="logo1.png" alt="OSPranto Tech Logo">
+            </div>
+            
+            <h1>যোগাযোগ করুন (Contact Us)</h1>
+            <p>ডেভেলপার: **OSPranto Tech**</p>
         </div>
 
-        <div class="contact-item">
-            <span class="icon">📧</span>
-            <p><strong>Email:</strong> <a href="mailto:OSPranto.Official@gmail.com">OSPranto.Official@gmail.com</a></p>
+        <div class="grid-layout">
+            
+            <div class="card">
+                <h2>একটি বার্তা পাঠান</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">আপনার নাম</label>
+                        <input type="text" id="name" placeholder="আপনার নাম লিখুন" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">ইমেল ঠিকানা</label>
+                        <input type="email" id="email" placeholder="আপনার ইমেল লিখুন" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">বিষয়</label>
+                        <input type="text" id="subject" placeholder="বিষয় লিখুন" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">বার্তা</label>
+                        <textarea id="message" rows="5" placeholder="আপনার বার্তা লিখুন" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        বার্তা পাঠান
+                    </button>
+                </form>
+            </div>
+
+            <div>
+                <h2>ডেভেলপার কন্টাক্ট (OSPranto Tech)</h2>
+
+                <a href="mailto:OSPranto.Official@gmail.com" class="info-link">
+                    <div class="info-icon bg-red"><i class="ri-mail-line text-xl text-white"></i></div>
+                    <div class="info-content">
+                        <h3>Email (Primary)</h3>
+                        <p>OSPranto.Official@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://t.me/MrMysteryMoon" target="_blank" class="info-link">
+                    <div class="info-icon bg-blue-sky"><i class="ri-telegram-line text-xl text-white"></i></div>
+                    <div class="info-content">
+                        <h3>Telegram</h3>
+                        <p>@MrMysteryMoon</p>
+                    </div>
+                </a>
+
+                <a href="https://facebook.com/AdnanHasanPranto" target="_blank" class="info-link">
+                    <div class="info-icon bg-blue-dark"><i class="ri-facebook-box-line text-xl text-white"></i></div>
+                    <div class="info-content">
+                        <h3>Facebook</h3>
+                        <p>Adnan Hasan Pranto</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/OSPrantoTech" target="_blank" class="info-link">
+                    <div class="info-icon bg-gray-dark"><i class="ri-github-line text-xl text-white"></i></div>
+                    <div class="info-content">
+                        <h3>GitHub</h3>
+                        <p>OSPranto Tech</p>
+                    </div>
+                </a>
+            </div>
         </div>
 
-        <div class="contact-item">
-            <span class="icon">📘</span>
-            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/AdnanHasanPranto" target="_blank">Adnan Hasan Pranto</a></p>
-        </div>
-
-        <div class="contact-item">
-            <span class="icon">💬</span>
-            <p><strong>Telegram:</strong> <a href="https://t.me/MrMysteryMoon" target="_blank">@MrMysteryMoon</a></p>
-        </div>
-
-        <div style="text-align: center;">
-            <a href="index.html" class="back-link">← সার্ভার চেকারে ফিরে যান</a>
+        <div class="footer">
+            <a href="index.html" class="back-to-home">
+                হোমপেজে ফিরে যান
+            </a>
         </div>
     </div>
-    
-    <footer>
-        <p style="color: #5d6675; font-size: 0.8em;">Developed by OSPranto Tech | &copy; 2025. All rights reserved.</p>
-    </footer>
 
+    <script>
+        // Send Message (Mailto) Functionality
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const emailBody = `Sender Name: ${name}\nSender Email: ${email}\n\nMessage:\n${message}`;
+            
+            const mailtoLink = `mailto:OSPranto.Official@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+            window.location.href = mailtoLink;
+
+            this.reset();
+        });
+    </script>
 </body>
 </html>
