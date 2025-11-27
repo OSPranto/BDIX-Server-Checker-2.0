@@ -25,13 +25,14 @@ const serverFileMap = {
 
 
 /**
- * সমস্ত তালিকা পরিষ্কার করে দেয় এবং গণনা শূন্য করে।
+ * সমস্ত তালিকা পরিষ্কার করে দেয় এবং গণনা শূন্য করে।
  */
 function clearLists() {
     workingList.innerHTML = '';
     notWorkingList.innerHTML = '';
+    // **পরিবর্তন: notWorkingSection আর লুকানো হবে না, কারণ চেক শেষে এটি লুকানো হবে।**
     workingSection.style.display = 'none';
-    notWorkingSection.style.display = 'none';
+    notWorkingSection.style.display = 'none'; 
     workingCount.textContent = '0';
     notWorkingCount.textContent = '0';
     // Ensure text shows 'START' or 0% when lists are cleared
@@ -71,15 +72,18 @@ function displayWorking(server) {
     workingList.appendChild(listItem);
 }
 
+// **পরিবর্তন: এই ফাংশনটি এখন আর notWorkingList-এ কিছু যোগ করবে না।**
 function displayNotWorking(server) {
-    const listItem = document.createElement('li');
-    listItem.className = 'server-item not-working';
-    listItem.innerHTML = `
-        <span>${server.name}</span>
-        <a href="${server.url}" target="_blank">${server.url}</a>
-        <span class="status-icon">Not Working</span>
-    `;
-    notWorkingList.appendChild(listItem);
+    // const listItem = document.createElement('li');
+    // listItem.className = 'server-item not-working';
+    // listItem.innerHTML = `
+    //     <span>${server.name}</span>
+    //     <a href="${server.url}" target="_blank">${server.url}</a>
+    //     <span class="status-icon">Not Working</span>
+    // `;
+    // notWorkingList.appendChild(listItem);
+    // সার্ভারটি কাজ করছে না। যেহেতু আপনি এটি দেখাতে চান না, তাই লিস্টে যোগ করার কোডটি বাদ দেওয়া হলো।
+    console.log(`Server not working and skipped: ${server.name}`); 
 }
 
 /**
@@ -153,7 +157,7 @@ async function checkAllServers() {
     const totalServers = serversToCheck.length;
     let checkedCount = 0;
     let workingCountValue = 0;
-    let notWorkingCountValue = 0;
+    // let notWorkingCountValue = 0; // এটি দরকার নেই, কারণ এটি ডিসপ্লে হচ্ছে না
 
     // 2. প্রতিটি সার্ভার চেক করা
     for (const server of serversToCheck) {
@@ -163,8 +167,8 @@ async function checkAllServers() {
             displayWorking(server);
             workingCountValue++;
         } else {
-            displayNotWorking(server);
-            notWorkingCountValue++;
+            displayNotWorking(server); // এখন এই ফাংশনটি সার্ভার লিস্টে কিছু যোগ করবে না।
+            // notWorkingCountValue++; // এটি দরকার নেই
         }
 
         // প্রোগ্রেস বার আপডেট
@@ -177,20 +181,25 @@ async function checkAllServers() {
     circularProgressContainer.classList.remove('checking');
     startButton.style.display = 'block'; // Start Button আবার দেখানো
 
-    // যদি কোনো সার্ভার পাওয়া যায়, তবেই সেকশনগুলি দেখানো
+    // --- 👇 আপনার কাঙ্ক্ষিত পরিবর্তন এখানে 👇 ---
+    
+    // শুধুমাত্র Working Servers থাকলে সেকশনটি দেখানো
     if (workingList.children.length > 0) {
         workingSection.style.display = 'block';
         workingCount.textContent = workingCountValue;
     }
-    if (notWorkingList.children.length > 0) {
-        notWorkingSection.style.display = 'block';
-        notWorkingCount.textContent = notWorkingCountValue;
-    }
+    
+    // Not Working সার্ভারের সেকশনটি সম্পূর্ণরূপে লুকিয়ে দেওয়া
+    notWorkingSection.style.display = 'none';
+    
+    // notWorkingCount আপডেট করারও প্রয়োজন নেই, তবে এটি 0ই থাকবে যেহেতু লিস্টে কিছু যোগ হয়নি।
+
+    // --- 👆 পরিবর্তন শেষ 👆 ---
 }
 
 // "Start Check" বাটনে ইভেন্ট লিসেনার যোগ করা
 startButton.addEventListener('click', checkAllServers);
 
-// পেজ লোড হওয়ার সাথে সাথে তালিকাগুলো ফাঁকা রাখা এবং START টেক্সট দেখানো
+// পেজ লোড হওয়ার সাথে সাথে তালিকাগুলো ফাঁকা রাখা এবং START টেক্সট দেখানো
 clearLists();
 startButton.style.display = 'block'; // Ensure button is visible initially
